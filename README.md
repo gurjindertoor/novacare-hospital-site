@@ -30,7 +30,13 @@ If you encounter any issues or have suggestions for improvements, feel free to o
 
 ## Demo Clips
 
-https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/42ee80a6-fbaa-4893-9f7f-a583d7ec2ede
+https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/aff53b18-6eae-4333-873c-c51847bff8f4
+
+https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/66760c77-71f5-4121-b443-9d5f66387714
+
+https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/4ce9c3e2-eb45-4bd1-b590-f1d1e0a28eae
+
+
 
 
 
