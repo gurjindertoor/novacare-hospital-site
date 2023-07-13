@@ -36,6 +36,8 @@ https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/66760c77
 
 https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/4ce9c3e2-eb45-4bd1-b590-f1d1e0a28eae
 
+https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/785ca4ce-7250-4c7e-80ea-889603be8c42
+
 
 
 
