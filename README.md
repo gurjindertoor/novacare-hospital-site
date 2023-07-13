@@ -1,4 +1,5 @@
 # NovaCare Hospital Website
+[Demo Clips](#demo-clips)
 
 ## Table of Contents
 
@@ -26,3 +27,10 @@ The "NovaCare Hospital Website" is a comprehensive online platform built with a 
 ## Contribution
 
 If you encounter any issues or have suggestions for improvements, feel free to open an issue or make a pull request. Your contribution is highly appreciated!
+
+## Demo Clips
+
+https://github.com/gurjindertoor/novacare-hospital-site/assets/78512847/42ee80a6-fbaa-4893-9f7f-a583d7ec2ede
+
+
+
