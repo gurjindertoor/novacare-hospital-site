@@ -24,11 +24,20 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Tempus Dominus JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js"></script>
+
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- jQuery first, then Popper.js (if necessary), then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MmUjv89V9jc7B6vDkF8uh7KJCjkJrle6j6pUpdR6ru+o3gezakt3AweFLOGwccM3" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
 </head>  
 
 <body>

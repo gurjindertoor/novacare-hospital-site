@@ -39,9 +39,9 @@
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
-                            <h3>Dr. Ethan Anderson</h3>
+                            <h3>Dr. Malik Anderson</h3>
                             <h6 class="fw-normal fst-italic text-primary mb-4">Cardiology</h6>
-                            <p class="m-0">Dr. Ethan Anderson is a highly regarded cardiologist with an extensive professional background, recognized for his exceptional knowledge and expertise in managing cardiovascular conditions.</p>
+                            <p class="m-0">Dr. Malik Anderson is a highly regarded cardiologist with an extensive professional background, recognized for his exceptional knowledge and expertise in managing cardiovascular conditions.</p>
                         </div>
                     </div>
                 </div>

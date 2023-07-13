@@ -9,10 +9,6 @@ include("../includes/dashboard_header.php");
             <h2 class="mb-4">Account Settings</h2>
             <form>
                 <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" value="admin">
-                </div>
-                <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="email" value="admin@example.com">
                 </div>

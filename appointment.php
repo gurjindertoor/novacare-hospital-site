@@ -81,6 +81,27 @@
 </div>
 <!-- Appointment End -->
 
+<!-- Start Appointment Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageModalLabel">Appointment Status</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Message will be inserted here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Appointment Modal -->
+
 <script type="text/javascript">
     $(document).ready(function() {
         let today = new Date();
@@ -169,10 +190,12 @@
 
                     if (data.statusCode === 201) {
                         // appointment already exists
-                        alert("The appointment is not available. Please choose another date or time.");
+                        $('.modal-body').html("The appointment is not available. Please choose another date or time.");
+                        $('#messageModal').modal('show');
                     } else {
                         // appointment doesn't exist, can be added
-                        alert("Appointment successfully scheduled!");
+                        $('.modal-body').html("Appointment successfully scheduled!");
+                        $('#messageModal').modal('show');
                         setTimeout(function() {
                             document.getElementById('appointmentForm').reset();
                         }, 100);

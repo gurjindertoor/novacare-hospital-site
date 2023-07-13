@@ -1,7 +1,7 @@
 <?php
     include("includes/header.php");
 
-    session_start();
+    // session_start();
 
     if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
         // Clear the session data
