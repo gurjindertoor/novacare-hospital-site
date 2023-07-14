@@ -1,27 +1,28 @@
 <?php
-    include("../includes/admin_header.php");
+    include("../includes/adminHeader.php");
     include("../includes/conn.php");
-    session_start();
+
+    session_start(); // Starts the session
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = mysqli_real_escape_string($conn, $_POST['pwd']);
 
-        // Select more fields from the database
         $sql = "SELECT admin_id, first_name, last_name, email, password FROM admin WHERE email = '$email'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
         $count = mysqli_num_rows($result);
 
-        // If result matched $email and $password, table row must be 1 row
         if ($count == 1) {
-            if (password_verify($password, $row['password'])) { // Make sure you are using hashed passwords and verifying them properly
+            if (password_verify($password, $row['password'])) {
+                // Store session data
                 $_SESSION['admin_id'] = $row['admin_id'];
                 $_SESSION['first_name'] = $row['first_name'];
                 $_SESSION['last_name'] = $row['last_name'];
                 $_SESSION['email'] = $row['email'];
-                $_SESSION['logged_in'] = true; // Set the 'logged_in' session variable
+                $_SESSION['logged_in'] = true;
+
                 header("location: appointments.php");
                 exit;
             } else {

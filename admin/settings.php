@@ -1,5 +1,6 @@
 <?php
-include("../includes/dashboard_header.php");
+    include("../includes/loginCheck.php");
+    include("../includes/dashboardHeader.php");
 ?>
 
 <!-- Account Settings -->
@@ -7,18 +8,18 @@ include("../includes/dashboard_header.php");
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2 class="mb-4">Account Settings</h2>
-            <form>
+            <form method="post" action="helpers/updateSettings.php">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" value="admin@example.com">
+                    <input type="email" class="form-control" id="email" name="email" value="">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password">
+                    <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <div class="mb-3">
                     <label for="confirmPassword" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPassword">
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>

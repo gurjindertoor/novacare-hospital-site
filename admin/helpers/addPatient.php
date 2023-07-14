@@ -1,6 +1,6 @@
 <?php
-    include("../includes/conn.php");
-    
+    include("../../includes/conn.php");
+
     function formatPhoneNumber($phoneNumber) {
         $areaCode = substr($phoneNumber, 0, 3);
         $middle = substr($phoneNumber, 3, 3);
@@ -14,9 +14,9 @@
         $last_name = ucfirst(mysqli_real_escape_string($conn, $_POST["last_name"]));
         $email = mysqli_real_escape_string($conn, $_POST["email"]);
         $phone = formatPhoneNumber(mysqli_real_escape_string($conn, $_POST["phone"]));
-        $specialty = mysqli_real_escape_string($conn, $_POST["specialty"]);
+        $date_of_birth = mysqli_real_escape_string($conn, $_POST["date_of_birth"]);
 
-        $sql = "INSERT INTO doctors (first_name, last_name, email, phone, specialty) VALUES ('$first_name', '$last_name', '$email', '$phone', '$specialty')";
+        $sql = "INSERT INTO patients (first_name, last_name, email, phone, date_of_birth) VALUES ('$first_name', '$last_name', '$email', '$phone', '$date_of_birth')";
 
         if (mysqli_query($conn, $sql)) {
             echo "New record created successfully";
@@ -27,6 +27,6 @@
         mysqli_close($conn);
 
         // Redirect to the patients page
-        header("Location: doctors.php");
+        header("Location: ../patients.php");
     }
 ?>

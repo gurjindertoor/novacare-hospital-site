@@ -1,12 +1,3 @@
-<?php
-    session_start();
-    if (!isset($_SESSION['admin_id']) && !isset($_SESSION['logged_in'])) {
-        // User is not logged in. Redirect them back to the login.php page.
-        header('Location: login.php');
-        exit;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,7 +64,7 @@
                     <div class="d-inline-flex align-items-center">
                         <a href="#" class="px-2" data-bs-toggle="modal" data-bs-target="#addAdminModal">Add Admin</a>
                         <a href="../index.php" class="px-2">Patient Portal</a>
-                        <a href="../index.php" class="px-2">Logout</a>
+                        <a href="logout.php" class="px-2">Logout</a>
                     </div>
                 </div>
             </nav>

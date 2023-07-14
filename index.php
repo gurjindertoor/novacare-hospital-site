@@ -40,12 +40,12 @@
 <!-- Hero End -->
 
 <?php
-    include("includes/about_info.php");
-    include("includes/services_info.php");
-    include("includes/appointment_info.php");
-    include("includes/program_info.php");
-    include("includes/team_info.php");
-    include("includes/testimonial_info.php");
+    include("includes/aboutInfo.php");
+    include("includes/servicesInfo.php");
+    include("includes/appointmentInfo.php");
+    include("includes/programsInfo.php");
+    include("includes/teamInfo.php");
+    include("includes/testimonialsInfo.php");
 ?>
 
 </body>

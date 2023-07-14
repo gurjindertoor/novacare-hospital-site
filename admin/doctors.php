@@ -1,5 +1,6 @@
 <?php
-    include("../includes/dashboard_header.php");
+    include("../includes/loginCheck.php");
+    include("../includes/dashboardHeader.php");
     include("../includes/conn.php");
 ?>
 
@@ -33,7 +34,7 @@
                         // output data of each row
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo "<tr><td>" . $row["doctor_id"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["last_name"] . "</td><td>" . $row["email"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["specialty"] . "</td><td>";
-                            echo "<form action='deleteDoctor.php' method='post'><input type='hidden' name='id_to_delete' value='" . $row["doctor_id"] . "'><button type='button' class='btn btn-warning btn-sm' data-bs-toggle='modal' data-bs-target='#editDoctorModal" . $row["doctor_id"] . "'>Edit</button> <button type='submit' name='delete' class='btn btn-danger btn-sm'>Delete</button></form></td></tr>";
+                            echo "<form action='helpers/deleteDoctor.php' method='post'><input type='hidden' name='id_to_delete' value='" . $row["doctor_id"] . "'><button type='button' class='btn btn-warning btn-sm' data-bs-toggle='modal' data-bs-target='#editDoctorModal" . $row["doctor_id"] . "'>Edit</button> <button type='submit' name='delete' class='btn btn-danger btn-sm'>Delete</button></form></td></tr>";
                             echo '
                                 <!-- Edit Doctor Modal -->
                                 <div class="modal fade" id="editDoctorModal' . $row["doctor_id"] . '" tabindex="-1" aria-labelledby="editDoctorModalLabel" aria-hidden="true">
@@ -44,7 +45,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form id="editDoctorForm' . $row["doctor_id"] . '" action="editDoctor.php" method="post">
+                                                <form id="editDoctorForm' . $row["doctor_id"] . '" action="helpers/editDoctor.php" method="post">
                                                     <input type="hidden" name="doctor_id" value="' . $row["doctor_id"] . '">
 
                                                     <div class="mb-3">
@@ -104,7 +105,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="doctorForm" action="addDoctor.php" method="POST">
+                <form id="doctorForm" action="helpers/addDoctor.php" method="POST">
                     <div class="mb-3">
                         <label for="doctorFirstName" class="form-label">First Name</label>
                         <input type="text" class="form-control" id="doctorFirstName" name="first_name" required>

@@ -1,6 +1,6 @@
 <?php
     include("includes/header.php");
-    include("includes/testimonial_info.php")
+    include("includes/testimonialsInfo.php")
 ?>
 </body>
 

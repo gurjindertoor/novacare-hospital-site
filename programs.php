@@ -1,8 +1,8 @@
 <?php
     include("includes/header.php");
-    include("includes/program_info.php");
-    include("includes/appointment_info.php");
-    include("includes/team_info.php")
+    include("includes/programInfo.php");
+    include("includes/appointmentInfo.php");
+    include("includes/teamInfo.php")
 ?>
 
 </body>

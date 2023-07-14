@@ -1,5 +1,5 @@
 <?php
-    include("../includes/conn.php");
+    include("../../includes/conn.php");
 
     function formatPhoneNumber($phoneNumber) {
         $areaCode = substr($phoneNumber, 0, 3);
@@ -27,6 +27,6 @@
 
         mysqli_close($conn);
 
-        header("Location: patients.php");
+        header("Location: ../patients.php");
     }
 ?>

@@ -1,7 +1,9 @@
 <?php
-    include("../includes/dashboard_header.php");
+    include("../includes/loginCheck.php");
+    include("../includes/dashboardHeader.php");
     include("../includes/conn.php");
 ?>
+
 
 <div class="container py-5">
     <div class="row">
@@ -39,7 +41,7 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                             $time_in_12_hour_format = date("g:i A", strtotime($row["time"]));
                             echo "<tr><td>" . $row["appointment_id"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["last_name"] . "</td><td>" . $row["date_of_birth"] . "</td><td>" . $row["email"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["date"] . "</td><td>" . $time_in_12_hour_format . "</td><td>" . $row["department"] . "</td><td>" . $row["doctor"] . "</td><td>";
-                            echo "<form action='deleteAppointment.php' method='post'><input type='hidden' name='id_to_delete' value='" . $row["appointment_id"] . "'><button type='button' class='btn btn-warning btn-sm' data-bs-toggle='modal' data-bs-target='#editAppointmentModal" . $row["appointment_id"] . "'>Edit</button> <button type='submit' name='delete' class='btn btn-danger btn-sm'>Delete</button></form></td></tr>";
+                            echo "<form action='helpers/deleteAppointment.php' method='post'><input type='hidden' name='id_to_delete' value='" . $row["appointment_id"] . "'><button type='button' class='btn btn-warning btn-sm' data-bs-toggle='modal' data-bs-target='#editAppointmentModal" . $row["appointment_id"] . "'>Edit</button> <button type='submit' name='delete' class='btn btn-danger btn-sm'>Delete</button></form></td></tr>";
                             echo '
                             <!-- Edit Appointment Modal -->
                             <div class="modal fade" id="editAppointmentModal' . $row["appointment_id"] . '" tabindex="-1" aria-labelledby="editAppointmentModalLabel" aria-hidden="true">
@@ -50,7 +52,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="editAppointmentForm" action="editAppointment.php" method="post">
+                                            <form id="editAppointmentForm" action="helpers/editAppointment.php" method="post">
                                                 <input type="hidden" name="appointment_id" value="' . $row["appointment_id"] . '">
 
                                                 <div class="mb-3">
@@ -148,7 +150,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="appointmentForm" action="addAppointment.php" method="post">
+                <form id="appointmentForm" action="helpers/addAppointment.php" method="post">
                     <div class="mb-3">
                         <label for="appointmentFirstName" class="form-label">First Name</label>
                         <input type="text" class="form-control" id="appointmentFirstName" name="first_name" required>

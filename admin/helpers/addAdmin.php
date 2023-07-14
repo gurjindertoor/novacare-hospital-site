@@ -1,5 +1,5 @@
 <?php
-    include("../includes/conn.php");
+    include("../../includes/conn.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Sanitize user input to protect against SQL injection
@@ -20,6 +20,6 @@
         mysqli_close($conn);
 
         // Redirect to the current page
-        header("Location: appointments.php");
+        header("Location: ../appointments.php");
     }
 ?>

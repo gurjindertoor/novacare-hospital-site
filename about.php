@@ -1,7 +1,7 @@
 <?php
     include("includes/header.php");
-    include("includes/about_info.php");
-    include("includes/team_info.php");
+    include("includes/aboutInfo.php");
+    include("includes/teamInfo.php");
 ?>
 
 </body>

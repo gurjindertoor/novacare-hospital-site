@@ -1,8 +1,8 @@
 <?php
     include("includes/header.php");
-    include("includes/services_info.php");
-    include("includes/appointment_info.php");
-    include("includes/testimonial_info.php");
+    include("includes/servicesInfo.php");
+    include("includes/appointmentInfo.php");
+    include("includes/testimonialsInfo.php");
 ?>
 
 </body>

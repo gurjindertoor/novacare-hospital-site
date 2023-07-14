@@ -1,5 +1,6 @@
 <?php
-    include("../includes/dashboard_header.php");
+    include("../includes/loginCheck.php");
+    include("../includes/dashboardHeader.php");
     include("../includes/conn.php");
 ?>
 
@@ -31,7 +32,7 @@
                             while($row = mysqli_fetch_assoc($result)) {
                                 $messages[] = $row;
                                 echo "<tr><td>".$row["message_id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["email"]."</td><td>".$row["phone"]."</td><td>";
-                                echo "<form action='deleteMessage.php' method='post'><input type='hidden' name='id_to_delete' value='".$row["message_id"]."'><button type='button' class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modal".$row["message_id"]."'>View</button><button type='submit' name='delete' class='btn btn-danger btn-sm'>Delete</button></form></td></tr>";
+                                echo "<form action='helpers/deleteMessage.php' method='post'><input type='hidden' name='id_to_delete' value='".$row["message_id"]."'><button type='button' class='btn btn-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modal".$row["message_id"]."'>View</button><button type='submit' name='delete' class='btn btn-danger btn-sm'>Delete</button></form></td></tr>";
                             }                            
                         } else {
                             echo "No records found";
